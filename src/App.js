@@ -8,8 +8,8 @@ function App() {
      <Provider store={store}>
       
   
-     
-  <Quotepage/>
+     <Quotepage/>
+  
       
      </Provider>
       
