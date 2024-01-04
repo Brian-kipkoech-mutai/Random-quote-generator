@@ -60,14 +60,22 @@
  
   
   <div id="buttons">
- <a href="twitter.com/intent/tweet" target="_top" id="tweet-quote" style={{background:colors[quote]} }>tweet</a>
-  <button id="new-quote" onClick={handleclick} style={{background:colors[quote]}}>new quote</button>
+  <a
+  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+    `${quotes[quote][0]}   - ${quotes[quote][1]}`
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  id="tweet-quote"
+  style={{ background: colors[quote] }}
+> Tweet</a>
+   <button id="new-quote" onClick={handleclick} style={{background:colors[quote]}}>new quote</button>
 
   </div>
    
 </div>
 
-<div id="developer"> by Brian Kipkoech </div>
+<div  className="developer"> Design and coded by <a href="https://www.linkedin.com/in/brian-kipkoech-71b5b9248?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9nnAF3gTQq2oeiliYkWdyA%3D%3D">Brian kipkoech</a></div>
 
         </div>
     )
